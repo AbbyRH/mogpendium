@@ -281,7 +281,7 @@ async function markAllRead() {
 		}
 
 		.head {
-			font-family: $vikunja-font;
+			font-family: $mogpendium-font;
 			font-size: 1rem;
 			padding: .5rem;
 		}
