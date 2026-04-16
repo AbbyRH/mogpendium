@@ -167,7 +167,7 @@ const savedFilterProjects = computed(() => projectStore.savedFilterProjects as I
 	display: flex;
 	flex-direction: column;
 	background: var(--site-background);
-	color: $vikunja-nav-color;
+	color: $mogpendium-nav-color;
 	padding: 1rem 0;
 	transition: transform $transition-duration ease-in;
 	position: fixed;
@@ -218,7 +218,7 @@ const savedFilterProjects = computed(() => projectStore.savedFilterProjects as I
 .top-menu .menu-list {
 	li {
 		font-weight: 600;
-		font-family: $vikunja-font;
+		font-family: $mogpendium-font;
 	}
 
 	.list-menu-link,
