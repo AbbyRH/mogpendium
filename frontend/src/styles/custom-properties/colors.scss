@@ -1,11 +1,11 @@
-// Vikunja colors as CSS custom properties
+// Mogpendium colors as CSS custom properties
 
 :root {
   // Core Bulma color variables
   // Added (from bulma-css-variables/css/bulma.css) to fix issues with undefined variables
   // This section should be removed once bulma/sass scoping issues are fixed
   // see https://kolaente.dev/vikunja/frontend/issues/1064
-  // Variables overridden in Vikunja specific rules below are commented out
+  // Variables overridden in Mogpendium specific rules below are commented out
   //--scheme-main: white;
   --scheme-main-bis: #fafafa;
   --scheme-main-ter: whitesmoke;
@@ -27,11 +27,11 @@
   --code-background: var(--background, whitesmoke);
   --pre: var(--text, #4a4a4a);
   --pre-background: var(--background, whitesmoke);
-  --link-visited: #b86bff;
+  --link-visited: #c86bff;
   //--link-hover: #363636;
   --link-hover-border: #b5b5b5;
   --link-focus: #363636;
-  --link-focus-border: var(--link, #485fc7);
+  --link-focus-border: var(--link, #d4507a);
   --link-active: #363636;
   --link-active-border: #4a4a4a;
   //--white-h: 0deg;
@@ -78,27 +78,27 @@
   --dark-light: hsla(var(--dark-h), var(--dark-s), var(--dark-light-l), var(--dark-a));
   --dark-dark-l: 54%;
   --dark-dark: hsla(var(--dark-h), var(--dark-s), var(--dark-dark-l), var(--dark-a));
-  //--primary-h: 171deg;
-  //--primary-s: 100%;
-  //--primary-l: 41%;
+  //--primary-h: 340deg;
+  //--primary-s: 75%;
+  //--primary-l: 58%;
   //--primary-a: 1;
   //--primary: hsla(var(--primary-h), var(--primary-s), var(--primary-l), var(--primary-a));
   --primary-invert-l: 100%;
   --primary-invert: #fff;
   --primary-light-l: 96%;
   --primary-light: hsla(var(--primary-h), var(--primary-s), var(--primary-light-l), var(--primary-a));
-  --primary-dark-l: 29%;
+  --primary-dark-l: 38%;
   --primary-dark: hsla(var(--primary-h), var(--primary-s), var(--primary-dark-l), var(--primary-a));
-  --link-h: 229deg;
-  --link-s: 53%;
-  --link-l: 53%;
+  --link-h: 340deg;
+  --link-s: 75%;
+  --link-l: 58%;
   --link-a: 1;
   //--link: hsla(var(--link-h), var(--link-s), var(--link-l), var(--link-a));
   --link-invert-l: 100%;
   --link-invert: #fff;
   --link-light-l: 96%;
   --link-light: hsla(var(--link-h), var(--link-s), var(--link-light-l), var(--link-a));
-  --link-dark-l: 47%;
+  --link-dark-l: 38%;
   --link-dark: hsla(var(--link-h), var(--link-s), var(--link-dark-l), var(--link-a));
   --info-h: 207deg;
   --info-s: 61%;
@@ -111,9 +111,9 @@
   --info-light: hsla(var(--info-h), var(--info-s), var(--info-light-l), var(--info-a));
   --info-dark-l: 41%;
   --info-dark: hsla(var(--info-h), var(--info-s), var(--info-dark-l), var(--info-a));
-  //--success-h: 153deg;
-  //--success-s: 53%;
-  //--success-l: 53%;
+  //--success-h: 150deg;
+  //--success-s: 55%;
+  //--success-l: 52%;
   //--success-a: 1;
   //--success: hsla(var(--success-h), var(--success-s), var(--success-l), var(--success-a));
   --success-invert-l: 100%;
@@ -122,9 +122,9 @@
   --success-light: hsla(var(--success-h), var(--success-s), var(--success-light-l), var(--success-a));
   --success-dark-l: 31%;
   --success-dark: hsla(var(--success-h), var(--success-s), var(--success-dark-l), var(--success-a));
-  //--warning-h: 44deg;
-  //--warning-s: 100%;
-  //--warning-l: 77%;
+  //--warning-h: 35deg;
+  //--warning-s: 85%;
+  //--warning-l: 62%;
   //--warning-a: 1;
   //--warning: hsla(var(--warning-h), var(--warning-s), var(--warning-l), var(--warning-a));
   --warning-invert-l: 0%;
@@ -134,8 +134,8 @@
   --warning-dark-l: 29%;
   --warning-dark: hsla(var(--warning-h), var(--warning-s), var(--warning-dark-l), var(--warning-a));
   //--danger-h: 348deg;
-  //--danger-s: 86%;
-  //--danger-l: 61%;
+  //--danger-s: 75%;
+  //--danger-l: 65%;
   //--danger-a: 1;
   //--danger: hsla(var(--danger-h), var(--danger-s), var(--danger-l), var(--danger-a));
   --danger-invert-l: 100%;
@@ -152,13 +152,13 @@
   --input-hover-color: var(--text-strong, #363636);
   --input-hover-border-color: var(--border-hover, #b5b5b5);
   --input-focus-color: var(--text-strong, #363636);
-  --input-focus-border-color: var(--link, #485fc7);
-  --input-focus-box-shadow-color: var(--input-focus-box-shadow-color-hsla, rgba(72, 95, 199, 0.25));
+  --input-focus-border-color: var(--link, #d4507a);
+  --input-focus-box-shadow-color: var(--input-focus-box-shadow-color-hsla, rgba(212, 80, 122, 0.25));
   --input-disabled-color: var(--text-light, #7a7a7a);
   //--input-disabled-background-color: var(--background, whitesmoke);
   //--input-disabled-border-color: var(--background, whitesmoke);
   --input-disabled-placeholder-color: rgba(122, 122, 122, 0.3);
-  --input-arrow: var(--link, #485fc7);
+  --input-arrow: var(--link, #d4507a);
   --input-icon-color: var(--border, #dbdbdb);
   --input-icon-active-color: var(--text, #4a4a4a);
   --black-bis: #121212;
@@ -173,20 +173,20 @@
   // END core Bulma color variables
 
 
-  // Vikunja specific variables
-  --grey-50: hsl(210, 20%, 98%);
-  --grey-100-hsl: 220, 14.3%, 95.9%;
+  // Mogpendium specific variables — warm mauve-pink grey scale
+  --grey-50: hsl(340, 20%, 98%);
+  --grey-100-hsl: 340, 14%, 96%;
   --grey-100: hsl(var(--grey-100-hsl));
-  --grey-200: hsl(220, 13%, 91%);
-  --grey-300: hsl(216, 12.2%, 83.9%);
-  --grey-400: hsl(217.9, 10.6%, 64.9%);
-  --grey-500-hsl: 220, 8.9%, 46.1%;
+  --grey-200: hsl(340, 12%, 91%);
+  --grey-300: hsl(340, 10%, 84%);
+  --grey-400: hsl(340, 8%, 65%);
+  --grey-500-hsl: 340, 7%, 46%;
   --grey-500: hsl(var(--grey-500-hsl));
-  --grey-600: hsl(215, 13.8%, 34.1%);
-  --grey-700: hsl(216.9, 19.1%, 26.7%);
-  --grey-800: hsl(215, 27.9%, 16.9%);
-  --grey-900: hsl(220.9, 39.3%, 11%);
-  --site-background: var(--grey-100);
+  --grey-600: hsl(340, 10%, 34%);
+  --grey-700: hsl(340, 14%, 27%);
+  --grey-800: hsl(340, 20%, 17%);
+  --grey-900: hsl(340, 30%, 11%);
+  --site-background: hsl(340, 35%, 97%);
 
   // Overrides of Bulma defaults
   --scheme-main: var(--white);
@@ -211,31 +211,31 @@
   --black-a: 1;
   --black: hsla(var(--black-h), var(--black-s), var(--black-l), var(--black-a));
 
-  // $warning / $orange: #ff851b
-  --warning-h: 27.9deg;
-  --warning-s: 100%;
-  --warning-l: 55.3%;
+  // Warm peach / apricot
+  --warning-h: 35deg;
+  --warning-s: 85%;
+  --warning-l: 62%;
   --warning-a: 1;
   --warning: hsla(var(--warning-h), var(--warning-s), var(--warning-l), var(--warning-a));
 
-  // $success / $green is #00db60
-  --success-h: 146.3deg;
-  --success-s: 100%;
-  --success-l: 42.9%;
+  // Soft mint green
+  --success-h: 150deg;
+  --success-s: 55%;
+  --success-l: 44%;
   --success-a: 1;
   --success: hsla(var(--success-h), var(--success-s), var(--success-l), var(--success-a));
 
-  // $danger / $red is #ff4136
-  --danger-h: 3.3deg;
-  --danger-s: 100%;
-  --danger-l: 60.6%;
+  // Rosy pink — gentler than red
+  --danger-h: 348deg;
+  --danger-s: 75%;
+  --danger-l: 58%;
   --danger-a: 1;
   --danger: hsla(var(--danger-h), var(--danger-s), var(--danger-l), var(--danger-a));
 
-  // var(--primary) / $blue is #1973ff
-  --primary-h: 217deg;
-  --primary-s: 98%;
-  --primary-l: 53%;
+  // Sakura / anime pink primary
+  --primary-h: 340deg;
+  --primary-s: 75%;
+  --primary-l: 50%;
   --primary-a: 1;
   --primary-hsl: var(--primary-h), var(--primary-s), var(--primary-l);
   --primary: hsla(var(--primary-h), var(--primary-s), var(--primary-l), var(--primary-a));
@@ -254,7 +254,7 @@
 
   // Define custom color variable to allow change in dark mode
   --card-border-color: var(--grey-200);
-  --logo-text-color: hsl(180, 1%, 15%);
+  --logo-text-color: hsl(340, 20%, 18%);
 
   // Code colors
   --code-variable: #da2222;
@@ -265,20 +265,20 @@
 
   &.dark {
     @media screen {
-      // Light mode colours reversed for dark mode
-      --grey-900-hsl: 210, 20%, 98%;
+      // Light mode colours reversed for dark mode (warm mauve-pink grey scale)
+      --grey-900-hsl: 340, 20%, 98%;
       --grey-900: hsl(var(--grey-900-hsl));
-      --grey-800: hsl(220, 14.3%, 95.9%);
-      --grey-700: hsl(220, 13%, 91%);
-      --grey-600: hsl(216, 12.2%, 83.9%);
-      --grey-500-hsl: 217.9, 10.6%, 64.9%;
+      --grey-800: hsl(340, 14%, 96%);
+      --grey-700: hsl(340, 12%, 91%);
+      --grey-600: hsl(340, 10%, 84%);
+      --grey-500-hsl: 340, 8%, 65%;
       --grey-500: hsl(var(--grey-500-hsl));
-      --grey-400: hsl(220, 8.9%, 46.1%);
-      --grey-300: hsl(215, 13.8%, 34.1%);
-      --grey-200: hsl(216.9, 19.1%, 26.7%);
-      --grey-100-hsl: 215, 27.9%, 16.9%;
+      --grey-400: hsl(340, 7%, 46%);
+      --grey-300: hsl(340, 10%, 34%);
+      --grey-200: hsl(340, 14%, 27%);
+      --grey-100-hsl: 340, 20%, 17%;
       --grey-100: hsl(var(--grey-100-hsl));
-      --grey-50-hsl: 220.9, 39.3%, 11%;
+      --grey-50-hsl: 340, 30%, 11%;
       --grey-50: hsl(var(--grey-50-hsl));
 
       // Dark grey looks better than black
@@ -308,10 +308,10 @@
       --card-border-color: hsla(var(--grey-100-hsl), 0.3);
       --logo-text-color: var(--grey-700);
 
-      // Slightly different primary color to make sure it has a sufficient contrast ratio
-      --primary-h: 217deg;
-      --primary-s: 98%;
-      --primary-l: 58%;
+      // Slightly brighter primary in dark mode for readability
+      --primary-h: 340deg;
+      --primary-s: 75%;
+      --primary-l: 65%;
 
       --scheme-main-bis: var(--grey-100);
       --scheme-main-ter: var(--grey-100);
