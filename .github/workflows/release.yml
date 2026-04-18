@@ -5,6 +5,7 @@ on:
 
 jobs:
   docker:
+    runs-on: ubuntu-latest
     steps:
       - name: Git describe
         id: ghd
