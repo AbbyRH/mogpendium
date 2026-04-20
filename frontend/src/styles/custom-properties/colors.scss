@@ -325,6 +325,11 @@
       --code-symbol: #b9f18d;
       --code-section: #faf594;
       --code-keyword: #70cff8;
+
+      // Page/sidebar background must be darker than card background (--white → --grey-50)
+      --site-background: hsl(340, 35%, 8%);
+      // Bulma base background used by code blocks and some Bulma components
+      --background: var(--grey-50);
     }
   }
 }
