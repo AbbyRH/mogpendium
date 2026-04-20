@@ -349,16 +349,16 @@ $task-background: var(--white);
 	}
 
 	&.has-custom-background-color {
-		color: hsl(215, 27.9%, 16.9%); // copied from grey-800 to avoid different values in dark mode
+		color: hsl(340, 20%, 17%); // copied from grey-800 to avoid different values in dark mode
 
 		.footer .icon,
 		.due-date,
 		.priority-label {
-			background: hsl(220, 13%, 91%);
+			background: hsl(340, 12%, 91%);
 		}
 
 		.footer :deep(.checklist-summary) {
-			color: hsl(216.9, 19.1%, 26.7%); // grey-700
+			color: hsl(340, 14%, 27%); // grey-700
 		}
 	}
 
@@ -367,13 +367,13 @@ $task-background: var(--white);
 		color: var(--white);
 
 		.task-id {
-			color: hsl(220, 13%, 91%); // grey-200;
+			color: hsl(340, 12%, 91%); // grey-200
 		}
 
 		.footer .icon,
 		.due-date,
 		.priority-label {
-			background: hsl(215, 27.9%, 16.9%); // grey-800
+			background: hsl(340, 20%, 17%); // grey-800
 		}
 
 		.footer {
@@ -382,7 +382,7 @@ $task-background: var(--white);
 			}
 
 			:deep(.checklist-summary) {
-				color: hsl(220, 13%, 91%); // grey-200
+				color: hsl(340, 12%, 91%); // grey-200
 			}
 		}
 	}
