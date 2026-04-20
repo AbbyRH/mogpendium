@@ -584,6 +584,13 @@ func registerAPIRoutes(a *echo.Group) {
 	}
 	a.POST("/tasks/:projecttask/assignees/bulk", bulkAssigneeHandler.CreateWeb)
 
+	taskVolunteerHandler := &handler.WebHandler{
+		EmptyStruct: func() handler.CObject {
+			return &models.TaskVolunteer{}
+		},
+	}
+	a.POST("/tasks/:projecttask/volunteer", taskVolunteerHandler.CreateWeb)
+
 	labelTaskHandler := &handler.WebHandler{
 		EmptyStruct: func() handler.CObject {
 			return &models.LabelTask{}

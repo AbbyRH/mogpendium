@@ -454,7 +454,17 @@
 								task.isFavorite ? $t('task.detail.actions.unfavorite') : $t('task.detail.actions.favorite')
 							}}
 						</XButton>
-						
+						<XButton
+							variant="secondary"
+							:icon="task.needsSupport ? 'hand-holding-heart' : ['far', 'hand-paper']"
+							:class="{'needs-support-active': task.needsSupport}"
+							@click="toggleNeedsSupport"
+						>
+							{{
+								task.needsSupport ? $t('lendAHand.toggleNeedsSupportActive') : $t('lendAHand.toggleNeedsSupport')
+							}}
+						</XButton>
+
 						<span class="action-heading">{{ $t('task.detail.organization') }}</span>
 						
 						<XButton
@@ -1120,6 +1130,14 @@ async function toggleFavorite() {
 	Object.assign(task.value, newTask)
 }
 
+async function toggleNeedsSupport() {
+	const newTask: ITask = {
+		...task.value,
+		needsSupport: !task.value.needsSupport,
+	}
+	Object.assign(task.value, await taskService.update(newTask))
+}
+
 async function duplicateCurrentTask() {
 	const duplicatedTask = await taskStore.duplicateTask(task.value.id)
 	if (duplicatedTask) {
@@ -1444,5 +1462,13 @@ h3 .button {
 .modal-content .scroll-to-comments-button {
 	inset-block-end: .75rem;
 	inset-inline-end: 1rem;
+}
+</style>
+
+<style lang="scss" scoped>
+.needs-support-active {
+	background: hsla(340, 75%, 58%, 0.12) !important;
+	color: var(--primary) !important;
+	border-color: var(--primary) !important;
 }
 </style>

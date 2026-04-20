@@ -83,6 +83,7 @@ export default class TaskModel extends AbstractModel<ITask> implements ITask {
 	identifier = ''
 	index = 0
 	isFavorite = false
+	needsSupport = false
 	subscription: ISubscription = null
 
 	position = 0

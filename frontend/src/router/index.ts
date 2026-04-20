@@ -189,6 +189,11 @@ const router = createRouter({
 			props: route => ({ taskId: Number(route.params.id as string) }),
 		},
 		{
+			path: '/lend-a-hand',
+			name: 'lend-a-hand',
+			component: () => import('@/views/tasks/LendAHand.vue'),
+		},
+		{
 			path: '/tasks/by/upcoming',
 			name: 'tasks.range',
 			component: UpcomingTasks,

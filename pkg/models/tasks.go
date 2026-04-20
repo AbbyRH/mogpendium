@@ -157,6 +157,9 @@ type Task struct {
 	CreatedBy   *user.User `xorm:"-" json:"created_by" valid:"-"`
 	CreatedByID int64      `xorm:"bigint not null" json:"-"` // ID of the user who put that task on the project
 
+	// If true, this task is flagged as needing support from another polycule member.
+	NeedsSupport bool `xorm:"default false" json:"needs_support"`
+
 	web.CRUDable    `xorm:"-" json:"-"`
 	web.Permissions `xorm:"-" json:"-"`
 }
