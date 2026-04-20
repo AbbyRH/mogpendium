@@ -148,7 +148,7 @@ function openTask(task: ITask) {
 
 .task-card-content {
 	flex: 1;
-	min-width: 0;
+	min-inline-size: 0;
 }
 
 .task-title {
