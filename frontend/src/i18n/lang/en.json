@@ -735,9 +735,21 @@
   "navigation": {
     "overview": "Overview",
     "upcoming": "Coming Up",
+    "lendAHand": "Lend a Hand",
     "settings": "Settings",
     "imprint": "Imprint",
     "privacy": "Privacy Policy"
+  },
+  "lendAHand": {
+    "title": "Lend a Hand",
+    "description": "These tasks could use some support from someone in the polycule.",
+    "empty": "Everything's flowing — no one needs a hand right now.",
+    "volunteerButton": "I'll help with this!",
+    "volunteerSuccess": "You've offered to help — that's so kind!",
+    "toggleNeedsSupport": "I could use some help with this",
+    "toggleNeedsSupportActive": "You've asked for help — someone will pick this up",
+    "toggleOff": "Actually, I'm okay with this one",
+    "inProject": "in {project}"
   },
   "misc": {
     "loading": "Loading…",
