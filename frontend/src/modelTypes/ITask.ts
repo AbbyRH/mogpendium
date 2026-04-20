@@ -44,6 +44,7 @@ export interface ITask extends IAbstract {
 	index: number
 	isFavorite: boolean
 	isUnread?: boolean
+	needsSupport: boolean
 	subscription: ISubscription
 
 	position: number

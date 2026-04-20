@@ -40,6 +40,17 @@
 				</li>
 				<li>
 					<RouterLink
+						v-shortcut="'KeyG KeyH'"
+						:to="{ name: 'lend-a-hand'}"
+					>
+						<span class="menu-item-icon icon">
+							<Icon icon="hands-helping" />
+						</span>
+						{{ $t('navigation.lendAHand') }}
+					</RouterLink>
+				</li>
+				<li>
+					<RouterLink
 						v-shortcut="'KeyG KeyP'"
 						:to="{ name: 'projects.index'}"
 					>

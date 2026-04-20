@@ -157,6 +157,9 @@ type Task struct {
 	CreatedBy   *user.User `xorm:"-" json:"created_by" valid:"-"`
 	CreatedByID int64      `xorm:"bigint not null" json:"-"` // ID of the user who put that task on the project
 
+	// If true, this task is flagged as needing support from another polycule member.
+	NeedsSupport bool `xorm:"default false" json:"needs_support"`
+
 	web.CRUDable    `xorm:"-" json:"-"`
 	web.Permissions `xorm:"-" json:"-"`
 }
@@ -1117,6 +1120,7 @@ func (t *Task) updateSingleTask(s *xorm.Session, a web.Auth, fields []string) (e
 		"bucket_id",
 		"repeat_mode",
 		"cover_image_attachment_id",
+		"needs_support",
 	}
 
 	// Validate fields if provided
@@ -1178,6 +1182,9 @@ func (t *Task) updateSingleTask(s *xorm.Session, a web.Auth, fields []string) (e
 		}
 		if !fieldSet["cover_image_attachment_id"] {
 			t.CoverImageAttachmentID = ot.CoverImageAttachmentID
+		}
+		if !fieldSet["needs_support"] {
+			t.NeedsSupport = ot.NeedsSupport
 		}
 	}
 
@@ -1388,6 +1395,10 @@ func (t *Task) updateSingleTask(s *xorm.Session, a web.Auth, fields []string) (e
 	// Attachment cover image
 	if t.CoverImageAttachmentID == 0 {
 		ot.CoverImageAttachmentID = 0
+	}
+	// Needs Support
+	if !t.NeedsSupport {
+		ot.NeedsSupport = false
 	}
 
 	_, err = s.ID(t.ID).
