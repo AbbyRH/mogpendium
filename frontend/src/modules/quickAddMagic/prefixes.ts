@@ -1,6 +1,6 @@
 import type {Prefixes} from './types'
 
-const MOGPENDIUM_PREFIXES: Prefixes = {
+const VIKUNJA_PREFIXES: Prefixes = {
 	label: '*',
 	project: '+',
 	priority: '!',
@@ -16,12 +16,12 @@ const TODOIST_PREFIXES: Prefixes = {
 
 export enum PrefixMode {
 	Disabled = 'disabled',
-	Default = 'mogpendium',
+	Default = 'vikunja',
 	Todoist = 'todoist',
 }
 
 export const PREFIXES = {
 	[PrefixMode.Disabled]: undefined,
-	[PrefixMode.Default]: MOGPENDIUM_PREFIXES,
+	[PrefixMode.Default]: VIKUNJA_PREFIXES,
 	[PrefixMode.Todoist]: TODOIST_PREFIXES,
 }

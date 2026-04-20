@@ -28,6 +28,24 @@ import (
 )
 
 func TestParseFilter(t *testing.T) {
+	t.Run("needs_support filter true", func(t *testing.T) {
+		result, err := getTaskFiltersFromFilterString("needs_support = true", "UTC")
+
+		require.NoError(t, err)
+		require.Len(t, result, 1)
+		assert.Equal(t, "needs_support", result[0].field)
+		assert.Equal(t, taskFilterComparatorEquals, result[0].comparator)
+		assert.Equal(t, true, result[0].value)
+	})
+	t.Run("needs_support filter false", func(t *testing.T) {
+		result, err := getTaskFiltersFromFilterString("needs_support = false", "UTC")
+
+		require.NoError(t, err)
+		require.Len(t, result, 1)
+		assert.Equal(t, "needs_support", result[0].field)
+		assert.Equal(t, taskFilterComparatorEquals, result[0].comparator)
+		assert.Equal(t, false, result[0].value)
+	})
 	t.Run("boolean filter true", func(t *testing.T) {
 		result, err := getTaskFiltersFromFilterString("done = true", "UTC")
 

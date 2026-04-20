@@ -127,9 +127,19 @@ export default class TaskService extends AbstractService<ITask> {
 
 	async markTaskAsRead(taskId: ITask['id']): Promise<void> {
 		const cancel = this.setLoading()
-	
+
 		try {
 			await AuthenticatedHTTPFactory().post(`/tasks/${taskId}/read`, {} as ITask)
+		} finally {
+			cancel()
+		}
+	}
+
+	async volunteer(taskId: ITask['id']): Promise<{task: ITask}> {
+		const cancel = this.setLoading()
+		try {
+			const response = await AuthenticatedHTTPFactory().post(`/tasks/${taskId}/volunteer`, {})
+			return response.data
 		} finally {
 			cancel()
 		}

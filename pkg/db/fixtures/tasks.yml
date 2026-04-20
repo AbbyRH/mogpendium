@@ -447,3 +447,22 @@
   index: 1
   created: 2018-12-01 01:12:04
   updated: 2018-12-01 01:12:04
+# Tasks for lend-a-hand / volunteer feature tests
+- id: 51
+  title: 'task #51 needs support'
+  done: false
+  created_by_id: 1
+  project_id: 1
+  index: 34
+  needs_support: true
+  created: 2018-12-01 01:12:04
+  updated: 2018-12-01 01:12:04
+- id: 52
+  title: 'task #52 needs support already assigned'
+  done: false
+  created_by_id: 1
+  project_id: 1
+  index: 35
+  needs_support: true
+  created: 2018-12-01 01:12:04
+  updated: 2018-12-01 01:12:04
